@@ -33,7 +33,7 @@ def add_transaction(category, amount, trans_type):
     
     balance = get_balance()
     if trans_type == "expense" and amount > balance:
-        messagebox.showerror("Error", "Insufficient balance!")
+        messagebox.showerror("Error", "Low balance!")
         return
 
     new_balance = balance + amount if trans_type == "income" else balance - amount
